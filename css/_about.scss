@@ -1,0 +1,213 @@
+/*--------------------------------------------------------------------------
+*       About Section
+*--------------------------------------------------------------------------*/
+
+section.about {
+    padding: 6rem 0;
+    background: $bodyColorAlt;
+
+    .about__container {
+        width: 1060px;
+        margin: 0 auto;
+
+        .about__header {
+            text-align: center;
+            margin-bottom: 3rem;
+
+            .about__title {
+                color: $titleColor;
+                text-align: center;
+            }
+
+            .about__border {
+                height: 2px;
+                width: 10rem;
+                background-color: $titleColorAlt;
+                margin-top: 0.3rem;
+                border-radius: 5px;
+                transition: all 0.3s ease-in-out;
+                margin: 1rem auto;
+            }
+        }
+
+        .about__details {
+            display: flex;
+            justify-content: space-around;
+
+            .about__contents {
+                width: 60%;
+
+                .about__details_title {
+                    padding-bottom: 1rem;
+                    font-size: $h1-font-size;
+                    font-style: italic;
+                    color: $textColor;
+                }
+
+                .about__details_typed {
+                    padding-bottom: 1rem;
+                    font-size: $h2-font-size;
+                    font-style: italic;
+                    color: rgba($textColor, 0.7);
+
+                    span {
+                        color: $titleColorAlt;
+                    }
+                }
+
+                .about__details_content {
+                    color: $textColorAlt;
+                    letter-spacing: 0.10rem;
+                    font-weight: $font-medium;
+                    font-size: $normal-font-size;
+                    line-height: 1.7;
+                    text-align: justify;
+                    margin-bottom: 2rem;
+                }
+
+                .about__seller {
+                    padding-bottom: 1rem;
+                    font-size: $h1-font-size;
+                    color: $textColor;
+                    margin-bottom: 2rem;
+                    font-style: italic;
+                }
+
+                .about__button {
+                    position: relative;
+                    transition: all 0.5s ease-in-out;
+                    color: $textColor;
+                    padding: 0.5rem 2rem;
+                    white-space: nowrap;
+                    text-align: center;
+                    text-decoration: none;
+                    border-radius: 10px;
+                    background: $bodyColor;
+                    border: 2px;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                        margin: -2px;
+                        border-radius: 10px;
+                        background-image: linear-gradient(to left bottom, #5EE19D, #FEF4C4, #6472F5);
+                        background-size: 300% 100%;
+                        transition: all 0.5s ease-in-out;
+                        z-index: -1;
+                    }
+
+
+
+                    @include hover-active() {
+                        &::after {
+                            background-position: -50% 0;
+                        }
+                    }
+
+                }
+            }
+
+            .about__profile {
+                width: 30%;
+
+                img {
+                    border-radius: 15px;
+                }
+            }
+        }
+
+
+    }
+}
+
+
+// laptop
+@media only screen and (max-width: 1024px) {
+    section.about {
+
+        .about__container {
+            width: 900px;
+
+            .about__details {
+                .about__contents {
+
+                    .about__details_content {
+                        letter-spacing: 0.05rem;
+                        margin-bottom: 1.25rem;
+                    }
+
+                    .about__seller {
+                        font-size: $h2-font-size;
+                        padding-bottom: 0;
+                    }
+                }
+
+                .about__profile {
+                    width: 35%;
+                }
+            }
+        }
+    }
+}
+
+
+// tab
+@media only screen and (max-width: 768px) {
+    section.about {
+
+        .about__container {
+            width: 650px;
+
+            .about__details {
+
+                .about__contents {
+
+                    .about__details_content {
+                        letter-spacing: 0.05rem;
+                        margin-bottom: 1.25rem;
+                    }
+
+                    .about__seller {
+                        font-size: $h2-font-size;
+                        padding-bottom: 0;
+                    }
+                }
+
+                .about__profile {
+                    width: 35%;
+                }
+            }
+        }
+    }
+}
+
+
+// phone
+@media only screen and (max-width: 425px) {
+    section.about {
+        padding: 1rem 0;
+
+        .about__container {
+            width: 100%;
+            padding: 2rem;
+
+            .about__details {
+                flex-direction: column-reverse;
+
+                .about__profile {
+                    width: 100%;
+                }
+
+                .about__contents {
+                    width: 100%;
+                    margin-top: 2.5rem;
+                }
+
+            }
+        }
+    }
+}

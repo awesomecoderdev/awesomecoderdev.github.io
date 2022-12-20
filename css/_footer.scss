@@ -1,0 +1,81 @@
+/*--------------------------------------------------------------------------
+*       Footer Section
+*--------------------------------------------------------------------------*/
+
+footer {
+    border-top: 1px solid rgba($titleColorAlt, 0.1);
+    position: relative;
+    background: $bodyColorAlt;
+
+    .footer__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1060px;
+        margin: 0 auto;
+        padding: 1rem 0;
+
+
+        .copy__right_text {
+            a {
+                color: $titleColor;
+                font-size: $normal-font-size;
+                font-weight: $font-medium;
+                cursor: pointer;
+                font-style: normal;
+
+                span {
+                    color: $titleColorAlt;
+                    font-weight: $font-semi-bold;
+
+                }
+            }
+
+            color: $textColorAlt;
+            font-size: $normal-font-size;
+            font-weight: 600;
+            letter-spacing: 0.05rem;
+        }
+
+    }
+}
+
+
+// laptop
+@media only screen and (max-width: 1024px) {
+
+    footer {
+        .footer__container {
+            width: 900px;
+        }
+    }
+}
+
+
+// tab
+@media only screen and (max-width: 768px) {
+
+    footer {
+        .footer__container {
+            width: 650px;
+
+        }
+    }
+}
+
+
+// phone
+@media only screen and (max-width: 425px) {
+
+    footer {
+        .footer__container {
+            width: 100%;
+
+            .copy__right_text {
+                p {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

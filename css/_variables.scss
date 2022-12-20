@@ -1,0 +1,46 @@
+$bodyColor: #2C2F32;
+$bodyColorAlt: #24262B;
+$primaryColor: #2d2e32;
+$reviewBackground: #24272A;
+$secondaryColor: #25262a;
+$titleColor: #fefefe;
+// $titleColorAlt: #5ee19d;
+$titleColorAlt: #6472F5;
+$textColor: #dadad8;
+$textColorAlt: #7c7d81;
+
+$inter:'Inter',
+sans-serif;
+$poppins:'Poppins',
+sans-serif;
+
+$biggest-font-size: 2.25rem;
+$h1-font-size: 1.5rem;
+$h2-font-size: 1.25rem;
+$h3-font-size: 1rem;
+$normal-font-size: .938rem;
+$small-font-size: .813rem;
+$smaller-font-size: .75rem;
+
+$font-medium: 500;
+$font-semi-bold: 600;
+
+
+
+@mixin hover-active() {
+
+    &:hover,
+    &:active {
+        @content;
+    }
+}
+
+::-moz-selection {
+    color: $textColor;
+    background: $titleColorAlt;
+}
+
+::selection {
+    color: $textColor;
+    background: $titleColorAlt;
+}

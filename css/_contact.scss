@@ -1,0 +1,287 @@
+/*--------------------------------------------------------------------------
+*       Contact Section
+*--------------------------------------------------------------------------*/
+
+section.contact {
+    padding: 6rem 0;
+
+    .contact__container {
+        width: 1060px;
+        margin: 0 auto;
+        color: $textColor;
+
+
+        .content__header {
+            text-align: center;
+            margin-bottom: 3rem;
+
+            .content__title {
+                color: $titleColor;
+                text-align: center;
+            }
+
+            .content__border {
+                height: 2px;
+                width: 10rem;
+                background-color: $titleColorAlt;
+                margin-top: 0.3rem;
+                border-radius: 5px;
+                transition: all 0.3s ease-in-out;
+                margin: 1rem auto;
+            }
+        }
+
+
+
+        .content__manager {
+            display: flex;
+            justify-content: space-around;
+
+            .contact__me {
+                width: 30%;
+                background: $bodyColorAlt;
+                border-radius: 15px;
+                padding: 3rem 1rem;
+                position: relative;
+                overflow: hidden;
+
+                .contact__title {
+                    font-size: $normal-font-size;
+                    font-style: italic;
+                    color: $titleColor;
+                    text-align: center;
+                }
+
+                .contact__subtitle {
+                    font-size: $normal-font-size;
+                    color: $textColorAlt;
+                    margin: 1rem;
+                    font-weight: 500;
+                }
+
+                .contacts {
+                    overflow: hidden;
+                    position: relative;
+
+                    .conact__list {
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                        margin-top: 1rem;
+                        align-items: flex-start;
+
+                        .contact__item {
+                            cursor: pointer;
+
+                            i {
+                                color: $titleColorAlt;
+                                margin-right: 10px;
+                                font-size: $h1-font-size;
+                                padding: 0.5rem;
+                            }
+
+                            color: $textColor;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                    }
+
+                }
+
+                .contact__svg {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    max-width: 100%;
+                    height: 100%;
+                    margin: 0 auto;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    z-index: 1;
+                    pointer-events: none;
+                }
+            }
+
+            .contact__details {
+                width: 60%;
+                border-radius: 15px;
+                padding: 2rem;
+
+                .contact__details_title {
+                    padding-bottom: 1rem;
+                    font-size: $h1-font-size;
+                    font-style: italic;
+                    color: $textColor;
+                }
+
+                .contact__details_typed {
+                    padding-bottom: 1rem;
+                    font-size: $h2-font-size;
+                    font-style: italic;
+                    color: rgba($textColor, 0.7);
+
+                    span {
+                        color: $titleColorAlt;
+                    }
+                }
+
+                .contact__details_content {
+                    color: $textColorAlt;
+                    letter-spacing: 0.10rem;
+                    font-weight: $font-medium;
+                    font-size: $normal-font-size;
+                    line-height: 1.7;
+                    text-align: justify;
+                    margin-bottom: 2rem;
+                }
+
+                .contact__button {
+                    position: relative;
+                    transition: all 0.5s ease-in-out;
+                    color: $textColor;
+                    padding: 0.5rem 2rem;
+                    white-space: nowrap;
+                    text-align: center;
+                    text-decoration: none;
+                    border-radius: 10px;
+                    background: $bodyColor;
+                    border: 2px;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                        margin: -2px;
+                        border-radius: 10px;
+                        background-image: linear-gradient(to left bottom, #5EE19D, #FEF4C4, #6472F5);
+                        background-size: 300% 100%;
+                        transition: all 0.5s ease-in-out;
+                        z-index: -1;
+                    }
+
+
+
+                    @include hover-active() {
+                        &::after {
+                            background-position: -50% 0;
+                        }
+                    }
+
+                }
+            }
+
+        }
+
+        .content__manager {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+
+
+// laptop
+@media only screen and (max-width: 1024px) {
+
+    section.contact {
+        .contact__container {
+            width: 900px;
+
+            .content__manager {
+                justify-content: space-evenly;
+
+                .contact__me {
+                    width: 35%;
+                    padding: 2rem 1rem;
+
+                    .contacts {
+                        .conact__list {
+                            .contact__item {
+                                i {
+                                    margin-right: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .contact__details {
+                    padding: 0rem 0 2rem 2rem;
+
+                    .contact__details_title {
+                        font-size: $h1-font-size;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// tab
+@media only screen and (max-width: 768px) {
+
+    section.contact {
+        padding-bottom: 2rem;
+
+        .contact__container {
+            width: 650px;
+
+            .content__manager {
+                justify-content: space-evenly;
+                flex-direction: column;
+
+                .contact__me {
+                    width: 100%;
+                    padding: 2rem 1rem;
+
+                    .contacts {
+                        .conact__list {
+                            .contact__item {
+                                i {
+                                    margin-right: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .contact__details {
+                    width: 100%;
+                    padding: 2rem 0 2rem 2rem;
+
+                    .contact__details_title {
+                        font-size: $h1-font-size;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+// phone
+@media only screen and (max-width: 425px) {
+
+    section.contact {
+        padding: 1rem 0;
+
+        .contact__container {
+            width: 100%;
+            padding: 2rem;
+
+            .content__manager {
+                .contact__details {
+                    padding: 2rem 0;
+                }
+            }
+        }
+    }
+}

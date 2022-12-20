@@ -1,0 +1,13 @@
+User-Agent: googlebot
+Allow: /
+Allow: /js/
+Allow: /css/
+
+User-Agent: *
+Allow: /
+Allow: /js/
+Allow: /css/
+Disallow:
+
+Sitemap: https://awesomecoderdev.github.io/sitemap.xml
+Host: https://awesomecoderdev.github.io/

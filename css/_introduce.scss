@@ -1,0 +1,488 @@
+/*--------------------------------------------------------------------------
+*       Introduce Section
+*--------------------------------------------------------------------------*/
+
+section.introduce {
+    padding: 5rem 0;
+    background: $bodyColorAlt;
+
+    .skill__container {
+        width: 1060px;
+        margin: 0 auto;
+
+        .skill__header {
+            text-align: center;
+            margin-bottom: 3rem;
+
+            .sikll__title {
+                color: $titleColor;
+                text-align: center;
+                font-size: $biggest-font-size;
+            }
+
+            .skill__border {
+                height: 2px;
+                width: 10rem;
+                background-color: $titleColorAlt;
+                margin-top: 0.3rem;
+                border-radius: 5px;
+                transition: all 0.3s ease-in-out;
+                margin: 1rem auto;
+            }
+
+        }
+
+        .skill__grid {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+
+            .skill__names {
+                width: 50%;
+                position: relative;
+
+                .sill__name_title {
+                    font-size: $h1-font-size;
+                    color: $textColor;
+                    font-style: italic;
+                    padding-bottom: 0.5rem;
+                    border-bottom: 1px solid rgba($textColorAlt, 0.1);
+                }
+
+                .my__skills {
+                    margin-top: 0.5rem;
+
+                    .my__skills_list {
+                        .my__skills_item {
+                            position: relative;
+                            font-size: $h3-font-size;
+                            color: $textColor;
+                            padding: 0.25rem 0;
+                            transition: all 0.3s ease;
+                            cursor: pointer;
+
+                            &::before {
+                                content: "\ee48";
+                                font-family: 'boxicons' !important;
+                                position: absolute;
+                                top: 50%;
+                                left: -20px;
+                                transform: translateY(-50%) translateX(-10px);
+                                opacity: 0;
+                                transition: all 0.3s ease;
+                                color: $textColor;
+                            }
+
+                            &:hover {
+                                transform: translateX(5px);
+
+                                &::before {
+                                    transform: translateY(-50%) translateX(0);
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .skill__perc {
+                width: 50%;
+                position: relative;
+
+                .sill__lists {
+                    position: relative;
+
+                    .skill__item {
+                        display: flex;
+                        justify-content: space-evenly;
+                        align-items: center;
+                        margin: 1rem;
+
+                        .skillbar__title {
+                            font-size: $biggest-font-size;
+
+                            .bxl-html5 {
+                                color: salmon;
+                            }
+
+                            .bxl-nodejs {
+                                color: #FEF4C4;
+                            }
+
+                            .bxl-php {
+                                color: #6472F5;
+                            }
+
+                            .bxl-wordpress {
+                                color: #4ed6ff;
+                            }
+                        }
+
+                        .skillbar {
+                            background-color: $textColorAlt;
+                            width: 100%;
+                            max-width: 600px;
+                            height: 7px;
+                            border-radius: 5px;
+                            position: relative;
+                            margin: 0 1rem;
+
+                            .skillbar-bar {
+                                position: absolute;
+                                content: "";
+                                top: 0;
+                                bottom: 0;
+                                left: 0;
+                                right: 0;
+                                width: 0%;
+                                background: $titleColorAlt;
+                                border-radius: 5px;
+                                height: 7px;
+
+                                &.html5 {
+                                    background: salmon;
+                                }
+
+                                &.js {
+                                    background: #FEF4C4;
+                                }
+
+                                &.php {
+                                    background: #6472F5;
+                                }
+
+                                &.wordpress {
+                                    background: #4ed6ff;
+                                }
+                            }
+
+                        }
+
+                        .skillbar__percent {
+                            color: $textColor;
+                            width: 30px;
+                            text-align: center;
+                        }
+                    }
+
+
+                }
+
+            }
+        }
+
+    }
+
+
+    .introduce__container {
+        width: 1060px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 5rem 0;
+
+        .introduce__skills {
+            position: relative;
+            width: 45%;
+
+            .skills__list {
+                position: relative;
+
+                .skills__item {
+                    position: relative;
+                    background: $bodyColor;
+                    border-radius: 5px;
+                    padding: 2rem;
+                    margin: 1rem 0;
+                    cursor: pointer;
+                    transition: all 0.4s ease-in-out;
+
+                    @include hover-active() {
+                        .skills__title {
+                            color: $titleColorAlt;
+                        }
+
+                        .skills__icon {
+                            color: $titleColorAlt;
+                            transform: scale(1.1);
+                        }
+
+                        box-shadow: 0px 4px 26px 8px rgba(0, 0, 0, 0.1);
+                        transform: translateY(-5px) scale(1.02);
+
+                    }
+
+                    .skills__title {
+                        color: $textColor;
+                        transition: all 0.4s ease-in-out;
+                        letter-spacing: 0.25rem;
+                    }
+
+                    .skills__subtitle {
+                        color: $textColorAlt;
+                        letter-spacing: 0.10rem;
+                        line-height: 1.75;
+                        margin-bottom: 1rem;
+                        width: 98%;
+                    }
+
+                    .skills__footer {
+                        color: $textColor;
+                        letter-spacing: 0.15rem;
+                        font-weight: $font-medium;
+                        font-size: $small-font-size;
+                    }
+
+                    .skills__icon {
+                        color: $textColorAlt;
+                        position: absolute;
+                        top: 2rem;
+                        right: 2rem;
+                        transition: color 0.4s ease-in-out, transform 0.3s ease-in-out;
+                        font-size: $h1-font-size;
+                    }
+                }
+            }
+        }
+
+        .introduce__myself {
+            position: relative;
+            width: 45%;
+
+            .introduce__title {
+                line-height: 1.5;
+                color: $textColorAlt;
+                margin-left: 2rem;
+                font-size: $small-font-size;
+                font-weight: 400;
+                margin-top: 1rem;
+                font-style: italic;
+                letter-spacing: 1px;
+                margin: 1rem 0;
+            }
+
+            .introduce__about {
+                color: $textColor;
+                font-size: $biggest-font-size;
+                letter-spacing: 0.15rem;
+            }
+
+            .intorduce__subtitle {
+                padding: 2rem 0;
+                font-size: $h1-font-size;
+                font-style: italic;
+                color: $textColor;
+            }
+
+            .intorduce__content {
+                color: $textColorAlt;
+                letter-spacing: 0.10rem;
+                font-weight: $font-medium;
+                font-size: $small-font-size;
+                line-height: 1.7;
+            }
+
+            .introduce__working {
+                padding-top: 1rem;
+
+                .introduce__work {
+                    font-size: $h3-font-size;
+                    font-style: italic;
+                    color: $textColor;
+                    text-decoration: underline;
+                }
+
+                picture {
+                    padding-right: 2rem;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+
+// laptop
+@media only screen and (max-width: 1024px) {
+
+    section.introduce {
+        padding-bottom: 0;
+
+        .skill__container {
+            width: 960px;
+        }
+
+        .introduce__container {
+            width: 960px;
+
+            .introduce__skills {
+                .skills__list {
+                    .skills__item {
+                        padding: 1.5rem;
+
+                        .skills__title {
+                            font-size: $h1-font-size;
+                            letter-spacing: 0.2rem;
+                        }
+
+                        .skills__subtitle {
+                            letter-spacing: 0.05rem;
+                        }
+
+                        .skills__footer {
+                            letter-spacing: 0.1rem;
+
+                        }
+                    }
+                }
+            }
+
+            .introduce__myself {
+                .introduce__about {
+                    font-size: $h1-font-size;
+                }
+
+                .intorduce__subtitle {
+                    font-size: $h2-font-size;
+                }
+
+                .intorduce__content {
+                    letter-spacing: 0.07rem;
+                }
+            }
+        }
+    }
+}
+
+
+// tab
+@media only screen and (max-width: 768px) {
+
+    section.introduce {
+        padding-bottom: 0;
+
+        .skill__container {
+            width: 650px;
+        }
+
+        .introduce__container {
+            width: 650px;
+
+            .introduce__skills {
+                .skills__list {
+                    .skills__item {
+                        padding: 1.5rem;
+
+                        .skills__title {
+                            font-size: $h2-font-size;
+                            letter-spacing: 0.2rem;
+                        }
+
+                        .skills__subtitle {
+                            letter-spacing: 0.05rem;
+                            line-height: 1.3;
+                        }
+
+                        .skills__footer {
+                            letter-spacing: 0.1rem;
+
+                        }
+                    }
+                }
+            }
+
+            .introduce__myself {
+                .introduce__about {
+                    font-size: $h1-font-size;
+                }
+
+                .intorduce__subtitle {
+                    font-size: $h2-font-size;
+                }
+
+                .intorduce__content {
+                    letter-spacing: 0.07rem;
+                }
+            }
+        }
+    }
+}
+
+// phone
+@media only screen and (max-width: 425px) {
+    section.introduce {
+        padding: 3rem 0;
+        padding-bottom: 0;
+
+        .skill__container {
+            width: 100%;
+
+            .skill__grid {
+                flex-direction: column;
+
+                .skill__names {
+                    width: 100%;
+                    padding: 0 2rem;
+                }
+
+                .skill__perc {
+                    width: 100%;
+                    padding: 0 1rem;
+
+                    .sill__lists {
+                        margin-top: 2rem;
+                        border-top: 1px solid rgba($textColorAlt, 0.1);
+                    }
+                }
+            }
+        }
+
+        .introduce__container {
+            width: 100%;
+            flex-direction: column;
+            padding: 1rem 0;
+
+            .introduce__skills {
+                width: 100%;
+                padding: 2rem;
+
+                .skills__list {
+                    .skills__item {
+                        .skills__subtitle {
+                            color: $textColor;
+                        }
+
+                        .skills__icon {
+                            i {
+                                font-size: 5rem;
+                                z-index: -1;
+                                color: rgba($textColorAlt, 0.1);
+                            }
+
+                        }
+
+
+                        &:hover {
+                            .skills__icon {
+
+                                i {
+                                    color: rgba($titleColorAlt, 0.3);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .introduce__myself {
+                width: 100%;
+                padding: 2rem;
+
+                .intorduce__content {
+                    text-align: justify;
+                }
+            }
+        }
+    }
+}
